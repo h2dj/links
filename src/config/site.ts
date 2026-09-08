@@ -43,7 +43,7 @@ export const site = {
    *  - public/ 폴더에 넣은 파일: "/avatar.jpg"
    * 비워두면 이니셜 아바타가 표시됩니다.
    */
-  avatarUrl: "https://github.com/h2dj/links/blob/main/%EC%9D%B8%EB%8F%99%EC%A4%80-20241129.jpg",
+  avatarUrl: "https://github.com/user-attachments/assets/247ea045-68f0-41c7-9538-b6eebfbb062c",
   /** 페이지 상단 배지 텍스트 (선택, 예: "🟢 예약 가능") */
   badge: "",
   /** 브라우저 탭 제목 */
