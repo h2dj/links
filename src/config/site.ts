@@ -55,37 +55,38 @@ export const site = {
 } as const;
 
 export const socialLinks: SocialLink[] = [
-  { platform: "instagram", url: "https://instagram.com/yourhandle" },
-  { platform: "github", url: "https://github.com/yourhandle" },
-  { platform: "youtube", url: "https://youtube.com/@yourhandle" },
-  { platform: "email", url: "mailto:you@example.com" },
+  { platform: "instagram", url: "https://instagram.com/dongjun.in" },
+  { platform: "github", url: "https://github.com/h2dj" },
+  { platform: "youtube", url: "https://youtube.com/@지각생-j3g" },
+  { platform: "email", url: "mailto:h2dj@ictact.kr" },
 ];
 
 export const links: LinkItem[] = [
   {
-    title: "🎉 새로운 소식 확인하기",
-    url: "https://example.com",
+    title: "공동체IT 사회적협동조합",
+    url: "https://ictact.kr",
     highlighted: true,
+    emoji: "🎉 ",
   },
   {
     title: "블로그",
-    url: "https://example.com/blog",
-    description: "제가 쓰는 글들을 모아둔 공간",
+    url: "https://blog.jinbo.net/h2dj",
+    description: "제가 썼던 글들을 모아둔 공간",
     emoji: "✍️",
   },
   {
-    title: "포트폴리오",
-    url: "https://example.com/portfolio",
+    title: "포트폴리오(교육)",
+    url: "https://citsc.notion.site/2a89b99c27e280f68910ec8a0f1a4959?source=copy_link",
     emoji: "💼",
   },
   {
-    title: "유튜브 채널",
-    url: "https://youtube.com/@yourhandle",
-    emoji: "🎬",
+    title: "마인드맵",
+    url: "https://h2dj.github.io/freemindonline",
+    emoji: "📩",
   },
   {
-    title: "문의하기",
-    url: "mailto:you@example.com",
+    title: "시스템사고 지도 그리기",
+    url: "https://h2dj.github.io/sysmap",
     emoji: "📩",
   },
 ];
