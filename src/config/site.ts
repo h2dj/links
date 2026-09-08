@@ -34,7 +34,7 @@ export interface LinkItem {
 
 export const site = {
   /** 프로필 이름 */
-  name: "내 이름",
+  name: "인동준(지각생)",
   /** 프로필 한 줄 소개 */
   bio: "환영합니다 👋 아래에서 제 링크들을 확인해보세요.",
   /**
@@ -43,11 +43,11 @@ export const site = {
    *  - public/ 폴더에 넣은 파일: "/avatar.jpg"
    * 비워두면 이니셜 아바타가 표시됩니다.
    */
-  avatarUrl: "",
+  avatarUrl: "https://github.com/h2dj/links/blob/main/%EC%9D%B8%EB%8F%99%EC%A4%80-20241129.jpg",
   /** 페이지 상단 배지 텍스트 (선택, 예: "🟢 예약 가능") */
   badge: "",
   /** 브라우저 탭 제목 */
-  siteTitle: "내 이름 | 링크",
+  siteTitle: "지각생 | 링크",
   /** 검색엔진/미리보기용 설명 */
   siteDescription: "제 모든 링크를 한 곳에서 확인하세요.",
   /** 테마 강조색 (버튼 강조, 링크 hover 등에 사용) */
