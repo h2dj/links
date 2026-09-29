@@ -30,6 +30,11 @@ export interface LinkItem {
   emoji?: string;
   /** true로 설정하면 강조 스타일(그라디언트)로 표시됩니다 */
   highlighted?: boolean;
+  /**
+   * 같은 group 이름을 가진 링크들은 하단에 "접었다 펼 수 있는" 묶음으로
+   * 표시됩니다 (예: "내가 만든 도구들"). 비워두면 평소처럼 목록에 바로 표시됩니다.
+   */
+  group?: string;
 }
 
 export const site = {
@@ -83,10 +88,12 @@ export const links: LinkItem[] = [
     title: "마인드맵",
     url: "https://h2dj.github.io/freemindonline",
     emoji: "📩",
+    group: "내가 만든 도구들",
   },
   {
     title: "시스템사고 지도 그리기",
     url: "https://h2dj.github.io/sysmap",
     emoji: "📩",
+    group: "내가 만든 도구들",
   },
 ];
