@@ -1,8 +1,24 @@
+import type { LinkItem } from "@/config/site";
 import { site, links, socialLinks } from "@/config/site";
 import { Avatar } from "@/components/Avatar";
 import { LinkButton } from "@/components/LinkButton";
+import { LinkGroup } from "@/components/LinkGroup";
 import { SocialLinks } from "@/components/SocialLinks";
 import { ThemeToggle } from "@/components/ThemeToggle";
+
+// `group`이 없는 링크는 그대로, 있는 링크는 같은 group 이름끼리 묶여
+// 하단에 접었다 펼 수 있는 섹션으로 표시됩니다 (첫 등장 순서 유지).
+const ungroupedLinks = links.filter((link) => !link.group);
+const linkGroups = links.reduce<{ label: string; links: LinkItem[] }[]>(
+  (groups, link) => {
+    if (!link.group) return groups;
+    const existing = groups.find((g) => g.label === link.group);
+    if (existing) existing.links.push(link);
+    else groups.push({ label: link.group, links: [link] });
+    return groups;
+  },
+  [],
+);
 
 export default function Home() {
   return (
@@ -33,8 +49,16 @@ export default function Home() {
         <SocialLinks links={socialLinks} />
 
         <nav className="mt-2 flex w-full flex-col gap-3" aria-label="Links">
-          {links.map((link, i) => (
+          {ungroupedLinks.map((link, i) => (
             <LinkButton key={link.title + link.url} link={link} index={i} />
+          ))}
+          {linkGroups.map((group, i) => (
+            <LinkGroup
+              key={group.label}
+              label={group.label}
+              links={group.links}
+              index={ungroupedLinks.length + i}
+            />
           ))}
         </nav>
       </main>

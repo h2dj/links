@@ -40,3 +40,8 @@ body {
 .link-card {
   animation: link-card-in 0.4s ease backwards;
 }
+
+/* Safari keeps its own disclosure triangle even with list-none on <summary>. */
+summary::-webkit-details-marker {
+  display: none;
+}
